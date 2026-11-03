@@ -148,6 +148,7 @@ void test_read_internal(void **state)
     read_internal(0);
 
     assert_int_equal(syscheck.sync_wal_autocheckpoint_pages, 1);
+    assert_int_equal(syscheck.sync_cache_size_kib, 1);
 }
 
 void test_read_internal_debug(void **state)
